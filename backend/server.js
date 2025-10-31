@@ -98,6 +98,7 @@ const checkRequestBody= (request,response,next) => {
     next();
 } 
 
+//Post Task  (Create Task)
 server.post('/tasks/',checkRequestBody, async (request, response) => {
     const{title,description,priority,due_date,status,created_at} = request.body;
     
@@ -108,6 +109,8 @@ server.post('/tasks/',checkRequestBody, async (request, response) => {
     console.log(createUser);
     response.send("Task Successfully Added");
 }); 
+
+//Uopdate Task API  (Update Task)
 
 server.patch('/tasks/:taskid/',checkRequestBody, async (request, response) => {
     const {taskid} = request.params;
