@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import './index.css'
+import './index.css' 
+
+ const REACT_API=process.env.REACT_APP_BASE_URL
+ console.log("REACT_API:", REACT_API)
 
 class TaskTracker extends Component {
   state = {
@@ -14,7 +17,9 @@ class TaskTracker extends Component {
       priority: '',
       sort_by: '',
     },
-  }
+  } 
+
+ 
 
   componentDidMount() {
     this.getTasks()
@@ -23,7 +28,7 @@ class TaskTracker extends Component {
   // Fetch tasks with filters (GET)
   getTasks = async () => {
     const { filters } = this.state
-    let url = 'http://localhost:5000/tasks'
+    let url = `${REACT_API}/tasks`
 
     let filterList = []
 
@@ -86,7 +91,7 @@ class TaskTracker extends Component {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/tasks/', {
+      const response = await fetch(`${REACT_API}/tasks/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -5,18 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "install": "npm install express sqlite3 better-sqlite3 sqlite cors date-fns date-format"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "better-sqlite3": "^12.4.1",
+    "better-sqlite3": "^12.5.0",
     "cors": "^2.8.5",
     "date-fns": "^4.1.0",
     "date-format": "^4.0.14",
-    "express": "^5.1.0",
+    "express": "^5.2.1",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
   }
