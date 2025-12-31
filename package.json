@@ -2,11 +2,32 @@
   "devDependencies": {
     "concurrently": "^9.2.1"
   },
- "scripts": {
-  "backend": "cd backend && nodemon server.js",
-  "frontend": "cd frontend/task-tracker && npm start",
-  "start": "concurrently \"npm run backend\" \"npm run frontend\""
-}
-
-
+  "scripts": {
+    "backend": "cd backend && node server.js",
+    "frontend": "cd frontend/task-tracker && npm start",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "name": "task-tracker",
+  "version": "1.0.0",
+  "description": "******* Backend ********",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himabindu92/task-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/himabindu92/task-tracker/issues"
+  },
+  "homepage": "https://github.com/himabindu92/task-tracker#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "express": "^5.2.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
 }
